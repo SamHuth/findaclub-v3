@@ -38,10 +38,10 @@ class StarterSite extends Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context['foo']   = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::context();';
-		$context['menu']  = Timber::get_menu();
+		// $context['foo']   = 'bar';
+		// $context['stuff'] = 'I am a value set in your functions.php file';
+		// $context['notes'] = 'These values are available everytime you call Timber::context();';
+		$context['menu']  = Timber::get_menu('Main Menu');
 		$context['site']  = $this;
 
 		return $context;
@@ -140,6 +140,6 @@ class StarterSite extends Site {
 	function update_twig_environment_options( $options ) {
 	    // $options['autoescape'] = true;
 
-	    return $options;
+		return $options;
 	}
 }
