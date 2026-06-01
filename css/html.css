@@ -1,0 +1,128 @@
+:root{
+    /* FONT */
+    --font-heading: 'Bebas Neue', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-heading: var(--font-body);
+    --font-mono: monospace;
+    
+    /* COLOUR */
+    --primary: #0074d9;
+    --primary-alt: #0a61ac;
+    --accent: #f88306;
+    --dark: #28343f;
+    --light: #f5f5f5;
+    --lighter: #e7e7e7;
+    --white: #ffffff;
+    --grey: #767676;
+    --black: #000000;
+
+    /* Font Size */
+    --step--6: clamp(0.05rem, .7rem + -0.4vw, 0.2rem);
+    --step--5: clamp(0.1rem, .7rem + -0.4vw, 0.3rem);
+    --step--4: clamp(0.3rem, .8rem + -0.3vw, 0.5rem);
+    --step--3: clamp(0.5rem, .9rem + -0.2vw, 0.7rem);
+    --step--2: clamp(0.7813rem, 0.9246rem + -0.185vw, 0.8784rem);
+    --step--1: clamp(0.9372rem, 0.9371rem + 0.0006vw, 0.9375rem);
+    --step-0: clamp(1rem, 0.9405rem + 0.2381vw, 1.125rem);
+    --step-1: clamp(1.067rem, 0.9322rem + 0.539vw, 1.35rem);
+    --step-2: clamp(1.1385rem, 0.9092rem + 0.9172vw, 1.62rem);
+    --step-3: clamp(1.2148rem, 0.8675rem + 1.389vw, 1.944rem);
+    --step-4: clamp(1.2962rem, 0.8025rem + 1.9746vw, 2.3328rem);
+    --step-5: clamp(1.683rem, 0.7085rem + 2.6978vw, 2.7994rem);
+    --step-6: clamp(2.5rem, 1.6rem + 3.9vw, 4rem);
+
+    --content-width: 1000px;
+}
+
+*{
+    font-family: var(--font-body);
+    color: var(--dark);
+}
+
+html{
+    font-family: var(--font-body);
+    /* background-color: var(--light); */
+}
+
+body{
+    /* margin: 0 auto;
+    max-width: 1000px; */
+}
+
+
+h1, .h1{
+    font-size: var(--step-5);
+    line-height: var(--step-6);
+    margin-top: var(--step-3);
+    margin-bottom: var(--step--1);
+    font-family: var(--font-serif);
+}
+
+h2, .h2{
+    font-size: var(--step-3);
+    line-height: var(--step-5);
+    margin-top: var(--step-3);
+    margin-bottom: var(--step--1);
+    font-family: var(--font-serif);
+}
+
+h3, .h3{
+    font-size: var(--step-2);
+    line-height: var(--step-4);
+    margin-top: var(--step-3);
+    margin-bottom: var(--step--1);
+    font-family: var(--font-serif);
+}
+
+h4, .h4{
+    font-size: var(--step-1);
+    line-height: var(--step-3);
+    margin-top: var(--step-3);
+    margin-bottom: var(--step--1);
+    font-family: var(--font-serif);
+}
+
+h5, .h5{
+    font-size: var(--step-0);
+    line-height: var(--step-2);
+    margin-top: var(--step-3);
+    margin-bottom: var(--step--1);
+    font-family: var(--font-serif);
+}
+
+h6, .h6{
+    font-size: var(--step--1);
+    line-height: var(--step-1);
+    margin-top: var(--step-3);
+    margin-bottom: var(--step--1);
+    font-family: var(--font-serif);
+}
+
+section > *:first-child{
+    margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: inherit;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+
+section:has(section){
+    padding: 0;
+}
+
+a, a:visited, a > *{
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:hover > *, a:focus > *{
+    color: var(--primary-alt);
+    text-decoration: underline solid;
+}
+
+a:focus, .btn:focus, button:focus{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}

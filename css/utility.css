@@ -1,0 +1,243 @@
+#content, #main-cta{
+    /* padding: var(--step-0) 0; */
+}
+.content-wrapper{
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--step-0);
+}
+
+.content-wrapper > *:first-child{
+    margin-top: 0;
+}
+
+.content-wrapper-small{
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--step--4) var(--step-0);
+    overflow: hidden;
+}
+
+.content-wrapper:has(.content-wrapper){
+    padding: 0;
+}
+
+.bg-light{
+    background-color: var(--light);
+}
+.bg-primary{
+    background-color: var(--primary);
+}
+.bg-dark{
+    background-color: var(--dark);
+}
+.bg-black{
+    background-color: var(--black);
+}
+.bg-grey{
+    background-color: var(--grey);
+}
+.p-0{
+    padding: 0;
+}
+.pt-0{
+    padding-top: 0;
+}
+.py-lg{
+    padding-top: var(--step-5);
+    padding-bottom: var(--step-5);
+}
+.pt-lg{
+    padding-top: var(--step-6);
+}
+.mt-lg{
+    margin-top: var(--step-6);
+}
+.underline{
+    text-decoration: 3px solid underline;
+    font-family: sans-serif;
+    text-underline-offset: 4px;
+}
+
+.rounded{
+    border-radius: var(--step--4);
+}
+
+.img-bg{
+    background-size:  80%;
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+    position: relative;
+    
+    /* border-top: 25px solid var(--primary); */
+    /* border-bottom: 25px solid var(--primary); */
+}
+:root{
+    --grad-bg: rgb(20, 43, 63);
+    --grad-1: rgb(16, 91, 156);
+    --grad-2: rgb(15, 81, 139);
+    --grad-3: rgb(13, 75, 129);
+
+    --grad-bg: rgb(19, 30, 40);
+    --grad-1: rgb(37, 60, 79);
+    --grad-2: rgb(20, 49, 75);
+    --grad-3: rgb(13, 40, 64);
+}
+
+.img-bg:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    background: var(--dark);
+    background: linear-gradient(
+        120deg,
+        var(--grad-bg) 40%, var(--grad-3) 40%,
+        var(--grad-3) 40.5%, var(--grad-bg) 40.5%, 
+        var(--grad-bg) 41.5%, var(--grad-2) 41.5%,
+        var(--grad-2) 42.5%, var(--grad-bg) 42.5%, 
+        var(--grad-bg) 43.5%, var(--grad-1) 43.5%,
+        var(--grad-1) 46%, var(--grad-bg) 46%, 
+        var(--grad-bg) 47%, rgba(0, 0, 0, .6) 47%,
+        rgba(0, 0, 0, .6) 84.5%, var(--grad-bg) 84.5%, 
+        var(--grad-bg) 85.5%, var(--grad-1) 85.5%,
+        var(--grad-1) 88.5%, var(--grad-bg) 88.5%,
+        var(--grad-bg) 89.5%, var(--grad-2) 89.5%,
+        var(--grad-2) 90.5%, var(--grad-bg) 90.5%,
+        var(--grad-bg) 91.5%, var(--grad-3) 91.5%,
+        var(--grad-3) 92%, var(--grad-bg) 92%
+        
+        
+    );
+}
+
+.img-bg div.content-wrapper,
+.img-bg div.content-wrapper-small{
+    position: relative;
+    z-index: 2;
+}
+
+.text-white, .text-white *{
+    color: var(--white);
+}
+.text-dark, .text-dark *{
+    color: var(--dark);
+}
+.text-grey, .text-grey *{
+    color: var(--grey);
+}
+.text-primary, .text-primary *{
+    color: var(--primary);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.current_page_item > a{
+    border-bottom: 1px solid red;
+}
+
+.club-sport{
+    text-transform: uppercase;
+    color: var(--dark);
+    background-color: var(--light);
+    padding: var(--step--6) var(--step--4);
+    border-radius: var(--step--2);
+    font-size: var(--step--3);
+    margin-bottom: var(--step--5);
+    display: inline-block;
+}
+
+.page-lead{
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: var(--step--5);
+}
+
+.btn{
+    padding: var(--step--1) var(--step-0);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--step-0);
+    font-size: var(--step-0);
+}
+
+.btn-primary, .btn-primary:visited{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:focus, .btn-primary:hover{
+    background-color: var(--primary-alt);
+    color: var(--white);
+}
+
+.btn-dark, .btn-dark:visited{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.btn-dark:focus, .btn-dark:hover{
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.btn-white, .btn-white:visited{
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+.btn-white:focus, .btn-white:hover{
+    background-color: var(--lighter);
+    color: var(--dark);
+}
+
+.btn .arrow{
+    display: inline-block;
+    /* transition: all ease .3s; */
+    line-height: 22px;
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:768px) {
+    .mobile-sr{
+        position:absolute;
+        left:-10000px;
+        top:auto;
+        width:1px;
+        height:1px;
+        overflow:hidden;
+    }       
+    .img-bg{
+        background-size: cover;
+    }
+    .img-bg:after{
+        background: linear-gradient(
+            120deg,
+            var(--grad-bg) 5%, var(--grad-3) 5%,
+            var(--grad-3) 5.5%, var(--grad-bg) 5.5%, 
+            var(--grad-bg) 6.5%, var(--grad-2) 6.5%,
+            var(--grad-2) 7.5%, var(--grad-bg) 7.5%, 
+            var(--grad-bg) 8.5%, var(--grad-1) 8.5%,
+            var(--grad-1) 11%, var(--grad-bg) 11%, 
+            var(--grad-bg) 12%, rgba(0, 0, 0, .6) 47%,
+            rgba(0, 0, 0, .6) 84.5%, var(--grad-bg) 84.5%, 
+            var(--grad-bg) 85.5%, var(--grad-1) 85.5%,
+            var(--grad-1) 87.5%, var(--grad-bg) 87.5%,
+            var(--grad-bg) 88.5%, var(--grad-2) 88.5%,
+            var(--grad-2) 89.5%, var(--grad-bg) 89.5%,
+            var(--grad-bg) 89%, var(--grad-3) 89%,
+            var(--grad-3) 90%, var(--grad-bg) 90%
+        );
+    }
+}

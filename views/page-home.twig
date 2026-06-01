@@ -1,0 +1,88 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<section class="py-lg">
+			<h2 class="h3 text-center">Join one of <span class="text-primary">1200+</span> listed sporting clubs across Australia!</h2>
+
+<style type="text/css">
+
+		
+.Marquees{
+	overflow-x: hidden;
+}
+.Marquee{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200vw;
+}
+.marquee{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+  background: var(--white);
+  width: 10vw;
+	/*line 43 is very important. since we have 16 items, width of the Marquee which is 200vw must be devided between them. which turns out to be 12.5vw*/
+  margin: 10px 0;
+  border-radius: 15px;
+}
+.marquee img{
+  background: var(--white);
+  padding: 4px;
+  border-radius: 1rem;
+  box-shadow: 0 .1rem 1rem rgba(0,0,0,.15) !important;
+}
+.FirstRow{
+animation: Scroll 50s linear infinite;}
+.SecondRow{
+  animation: Scroll 50s linear infinite;
+  animation-direction: reverse;
+}
+@keyframes Scroll {
+    0% {transform: translateX(-50vw);
+		-webkit-transform: translateX(-50vw);}
+	100% {transform: translateX(50vw);
+		-webkit-transform: translateX(50vw);}
+}
+
+	</style>
+
+<div class="Marquees">
+	<div class="Marquee FirstRow">
+		{% for post in posts %}
+		<div class="marquee Item">
+		
+		<img src="{{ post.thumbnail.src ?: 'https://findaclub.com.au/wp-content/themes/findaclub-v2-main/images/findaclub-pin.jpg' }}" width="50" alt="{{ post.name | e }}"/>
+		</div>
+		{% endfor %}
+		{% for post in posts %}
+		<div class="marquee Item">
+		
+		<img src="{{ post.thumbnail.src ?: 'https://findaclub.com.au/wp-content/themes/findaclub-v2-main/images/findaclub-pin.jpg' }}" width="50" alt="{{ post.name | e }}"/>
+		</div>
+		{% endfor %}
+	</div>
+	</div>
+	
+
+		</section>
+		<section class="py-lg">
+			<h2>An opportunity in Australian amateur sports awaits</h2>
+			<p>Whether you want to play, coach, or volunteer, findaclub.com.au connects you with sporting clubs across Australia offering opportunities for all ages and skill levels. From junior leagues to masters competitions, your next sporting adventure starts here.</p>
+		</section>
+		<section class="py-lg">
+			<h2>Clubs with open positions</h2>
+			<p>Get priority listing in search results when you upgrade your club listing. Better visibility, better listings and better opportunities to be contacted by players, staff and volunteers.</p>
+		</section>
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="article-content py-lg">
+				<div class="article-body">
+					{{post.content}}
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

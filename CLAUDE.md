@@ -40,3 +40,9 @@ Use Australian English spelling in all code comments, copy, and documentation.
 - Sanitise all input with the appropriate WordPress function (`sanitize_text_field()`, `absint()`, etc.)
 - Escape all output with the appropriate WordPress function (`esc_html()`, `esc_url()`, `esc_attr()`, etc.)
 - Use `get_post_meta()` / `update_post_meta()` for custom fields — there is no ACF in this project
+
+
+Design inspo
+https://dribbble.com/shots/23892478-Sports-Club-Landing-page-for-a-SaaS-software-platform
+https://dribbble.com/shots/25596911-Website-design-concepting-for-MVP-Sports-Club
+https://dribbble.com/shots/26073053--Sports-Coach-Booking-App

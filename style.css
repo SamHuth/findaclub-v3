@@ -8,3 +8,12 @@
     License: GNU General Public License v2 or later
     License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+/* Register Layers */
+@layer reset, html, utility, group;
+
+/* Import Layers */
+@import url('css/reset.css') layer(reset);
+@import url('css/html.css') layer(html);
+@import url('css/utility.css') layer(utility);
+@import url('css/group.css') layer(group);

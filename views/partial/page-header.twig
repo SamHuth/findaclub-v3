@@ -1,0 +1,22 @@
+<section class="page-header bg-dark img-bg {{ featured_image_url ? "img-bg" : "" }}" style="background-image:url({{ featured_image_url }})">
+    <div class="content-wrapper-small pt-lg">
+        {% if type == 'home' %}
+            <span class="page-lead text-primary mt-lg">findaclub.com.au</span>
+        {% endif %}
+        {% if sport %}
+            <span class="club-sport">{{ sport}}</span>
+        {% endif %}
+        {% if post.title %}
+            <h1 class="article-h1 text-white">{{post.title }}</h1>
+        {% endif %}
+        {% if title %}
+            <h1 class="article-h1 text-white">{{ title }}</h1>
+        {% endif %}
+        {% if type == 'home' %}
+            <div class="inline-buttons">
+                <a href="/?s" class="btn btn-primary rounded">Search Local Sports Clubs {% include 'icons/chevron-right.twig' with { 'color': '#fff'} %}</a>
+                <a href="/join-the-player-database" class="btn btn-white rounded">Join the Player Database {% include 'icons/chevron-right.twig' with { 'color': '#28343f'} %}</a>
+            </div>
+        {% endif %}
+    </div>
+</section>

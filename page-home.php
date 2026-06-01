@@ -22,8 +22,24 @@
  */
 
 $context = Timber::context();
+
+$posts = Timber::get_posts([
+    'post_type' => 'club',
+    'posts_per_page' => 20,
+    'meta_key' => 'is_premium',
+    'orderby' => array(
+        'is_premium' => 'DESC',
+        'title' => 'ASC',
+    ),
+]);
+$context['type']  = 'home';
+
+$context['posts'] = $posts;
+
 $timber_post     = Timber::get_post();
 $context['post'] = $timber_post;
 $context['featured_image_url'] = get_the_post_thumbnail_url($timber_post->ID);
 
+$timber_post     = Timber::get_post();
+$context['post'] = $timber_post;
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
