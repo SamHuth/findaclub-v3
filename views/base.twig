@@ -14,13 +14,14 @@
 			<header class="header">
 				{% block header %}
 					<div class="nav-wrapper content-wrapper">
-						<span class="hdr-logo" role="banner" style="display: flex;">
+						<span class="hdr-logo" role="banner" style="display: flex; align-items:center;">
 							<a class="hdr-logo-link" href="{{site.url}}" rel="home">
 								<img width="180" height="auto" src="https://findaclub.com.au/wp-content/uploads/2024/12/findaclubcomau-high-resolution-logo-transparent.png" class="img-fluid" alt="findaclub.com.au logo" decoding="async" srcset="https://findaclub.com.au/wp-content/uploads/2024/12/findaclubcomau-high-resolution-logo-transparent.png 2000w, https://findaclub.com.au/wp-content/uploads/2024/12/findaclubcomau-high-resolution-logo-transparent-300x55.png 300w, https://findaclub.com.au/wp-content/uploads/2024/12/findaclubcomau-high-resolution-logo-transparent-1024x189.png 1024w, https://findaclub.com.au/wp-content/uploads/2024/12/findaclubcomau-high-resolution-logo-transparent-768x142.png 768w, https://findaclub.com.au/wp-content/uploads/2024/12/findaclubcomau-high-resolution-logo-transparent-1536x283.png 1536w" sizes="(max-width: 2000px) 100vw, 2000px">
 							</a>
 						</span>
-						<nav id="nav-main" class="nav-main" role="navigation">
+						<nav id="main-nav" role="navigation">
 							{% include "partial/nav-icons.twig" %}
+							{% include "menu.twig" with {'items': menu.get_items} %}
 						</nav>
 					</div>
 				{% endblock %}
@@ -47,9 +48,11 @@
 		{% include 'partial/main-cta.twig'  %}
 
 		{% block footer %}
-			<footer id="footer" class="content-wrapper">
+			<section class="bg-light">
+			<footer id="footer" class="content-wrapper bg-light">
 				{% include 'footer.twig' %}
 			</footer>
+			</section>
 			{{ function('wp_footer') }}
 		{% endblock %}
 

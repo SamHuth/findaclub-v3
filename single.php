@@ -14,9 +14,14 @@ $timber_post     = Timber::get_post();
 $context['post'] = $timber_post;
 
 $sport = get_the_terms($timber_post->ID, 'sport');
-$context['sport'] = $sport[0]->name ? $sport[0]->name : '';
-$context['featured_image_url'] = get_the_post_thumbnail_url($timber_post->ID);
 
+if(isset($sport[0]->name)){
+	$context['sport'] = $sport[0]->name;
+} else {
+	$context['sport'] = '';
+}
+
+$context['featured_image_url'] = get_the_post_thumbnail_url($timber_post->ID);
 
 if ( post_password_required( $timber_post->ID ) ) {
 	Timber::render( 'single-password.twig', $context );

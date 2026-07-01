@@ -101,3 +101,9 @@ add_filter( 'timber/context', function( $context ) {
 
     return $context;
 } );
+
+
+function wp_t_add_js() {
+    wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/js/index.js', array( 'jquery' ));
+}
+add_action( 'wp_enqueue_scripts', 'wp_t_add_js' );

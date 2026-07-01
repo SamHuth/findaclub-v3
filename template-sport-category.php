@@ -15,7 +15,6 @@ $timber_post     = Timber::get_post();
 $context['post'] = $timber_post;
 $context['featured_image_url'] = get_the_post_thumbnail_url($timber_post->ID);
 
-
 // Clubs Lists
 $posts = Timber::get_posts([
     'post_type' => 'club',

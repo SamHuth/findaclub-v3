@@ -4,7 +4,8 @@
 .content-wrapper{
     max-width: var(--content-width);
     margin: 0 auto;
-    padding: var(--step-0);
+    /* padding: var(--step-0); */
+    padding: var(--step-0) var(--step-5);
 }
 
 .content-wrapper > *:first-child{
@@ -14,7 +15,7 @@
 .content-wrapper-small{
     max-width: var(--content-width);
     margin: 0 auto;
-    padding: var(--step--4) var(--step-0);
+    padding: var(--step--2) var(--step-5);
     overflow: hidden;
 }
 
@@ -53,6 +54,13 @@
 .mt-lg{
     margin-top: var(--step-6);
 }
+
+.mt-0{
+    margin-top: 0;
+}
+.mb-0{
+    margin-bottom: 0;
+}
 .underline{
     text-decoration: 3px solid underline;
     font-family: sans-serif;
@@ -60,7 +68,7 @@
 }
 
 .rounded{
-    border-radius: var(--step--4);
+    border-radius: var(--step--6);
 }
 
 .img-bg{
@@ -71,6 +79,9 @@
     
     /* border-top: 25px solid var(--primary); */
     /* border-bottom: 25px solid var(--primary); */
+}
+.home .img-bg{
+    background-size: cover;
 }
 :root{
     --grad-bg: rgb(20, 43, 63);
@@ -137,8 +148,23 @@
     text-align: center;
 }
 
-.current_page_item > a{
-    border-bottom: 1px solid red;
+.current_page_item > a, .current-menu-item a{
+    /* border-bottom: 1px solid var(--primary); */
+    color: var(--primary)!important;
+    /* background-color: var(--primary-light)!important; */
+    position: relative;
+    text-decoration: underline!important;
+}
+.current_page_item > a::before{
+    display: block;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: red;
 }
 
 .club-sport{
@@ -150,14 +176,17 @@
     font-size: var(--step--3);
     margin-bottom: var(--step--5);
     display: inline-block;
+    font-weight: bold;
 }
 
 .page-lead{
-    font-size: var(--step--1);
+    font-size: var(--step-1);
     text-transform: uppercase;
     display: inline-block;
     font-weight: bold;
     margin-bottom: var(--step--5);
+    /* font-family: var(--font-serif); */
+    letter-spacing: .6px;
 }
 
 .btn{

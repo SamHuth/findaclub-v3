@@ -1,8 +1,8 @@
 {% if menu %}
-	<ul>
+	<ul class="primary-nav">
 	{% for item in items %}
 		<li class="{{ item.classes | join(' ') }}">
-			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+			<a class="{{ item.children|length > 0 ? 'dropdown' : '' }}" target="{{ item.target }}" href="{{ item.children|length > 0 ? '#': item.link }}">{{ item.title }}</a>
 			{% include "menu.twig" with {'items': item.children} %}
 		</li>
 	{% endfor %}
